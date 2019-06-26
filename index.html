@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hi</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+<div class="outlier">
+<form action="markupdate()">
+	<label for="name">Name</label>
+	<input type="text" id="name" name="name" placeholder="Enter Subject name">
+	<label for="mark">Mark</label>
+	<input type="text" id="mark" name="mark" placeholder="Enter Subject Mark">
+	<input type="button" name="button" value="Submit" id="res" onclick="formdata(this.form)">
+</form>
+</div>
+<div id="tablearea">
+	<table>
+		<caption>Rank List</caption>
+		<thead>
+		<th>Name</th>
+		<th>Mark</th>
+		<th>Rank</th>
+		</thead>
+		<tbody>
+			<div id="table_body">
+				
+			</div>
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript">
+	function formdata(form){
+		var name = form.name.value;
+		var mark = form.mark.value;
+		console.log(name);
+		console.log(mark);
+		var div = document.getElementById('table_body')
+		var table = document.createElement('table');
+    	var tr = document.createElement('tr');
+    	var td_1 = document.createElement('td');
+    	var td_2 = document.createElement('td');
+    	var td_3 = document.createElement('td');
+    	var text_1 = document.createTextNode(name);
+    	var text_2 = document.createTextNode(mark);
+    	var text_3 = document.createTextNode(mark);
+		td_1.appendChild(text_1);
+    	td_2.appendChild(text_2);
+    	td_3.appendChild(text_3)
+    	tr.appendChild(td_1);
+    	tr.appendChild(td_2);
+    	tr.appendChild(td_3);
+
+    table.appendChild(tr);
+document.getElementById('tablearea').appendChild(table);
+}	
+</script>
+</body>
+</html>
