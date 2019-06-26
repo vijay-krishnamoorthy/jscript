@@ -1,2 +1,2 @@
-# > jscript
-Just trying something new for a concept
+> script
+**Just trying something new for a concept**
